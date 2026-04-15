@@ -1,20 +1,14 @@
 local M = {}
 
-local ok_parsers, ts_parsers = pcall( require, "nvim-treesitter.parsers" )
-if not ok_parsers then
-  ts_parsers = nil
-end
+local is_available = pcall( require, "nvim-treesitter.parsers" )
 
 local function get_parser_filetype ( lang )
-  if lang and ts_parsers[ lang ] then
-    return ts_parsers[ lang ].filetype or lang
+  if lang then
+    -- vim.treesitter.language.get_filetypes( lang ) or
+    return lang
   else
     return ""
   end
-end
-
-local function is_available ()
-  return ok_parsers
 end
 
 function M.get_ft_at_cursor ( bufnr )
@@ -23,7 +17,7 @@ function M.get_ft_at_cursor ( bufnr )
     injected_filetype = "",
   }
 
-  if is_available() then
+  if is_available then
     local cur_node = vim.treesitter.get_node( { bufnr = bufnr } )
 
     if cur_node then
