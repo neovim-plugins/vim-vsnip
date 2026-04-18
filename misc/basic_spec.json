@@ -8,7 +8,9 @@
     ]
   },
   "inline-fn": {
-    "prefix": ["inline-fn"],
+    "prefix": [
+      "inline-fn"
+    ],
     "body": [
       "{ -> $1 }$0"
     ]

@@ -171,4 +171,3 @@ function! s:_fix_text_edits(bufnr, text_edits) abort
 
   return [l:fixeol, l:text_edits]
 endfunction
-
