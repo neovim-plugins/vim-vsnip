@@ -1,7 +1,7 @@
-# comment.nvim
+# hrsh7th/vim-vsnip
 
-Fork of [numtostr/comment.nvim](https://github.com/numtostr/comment.nvim).
+Fork of [hrsh7th/hrsh7th/vim-vsnip](https://github.com/hrsh7th/vim-vsnip).
 
 Patches:
 
-- fix for `treesitter.get_parser()` under `nvim v0.12.x`;
+- migrate to treesitter `main`;
