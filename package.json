@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/neovim-plugins/vim-vsnip.git"
   },
-  "license": "ISC",
+  "license": "Proprietary Software",
   "author": "root <root@softvisio.net>",
   "scripts": {
     "lint": "vint .",
