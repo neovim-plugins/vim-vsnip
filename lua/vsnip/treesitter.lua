@@ -6,7 +6,11 @@ local function get_parser_filetype ( lang )
   if lang then
 
     -- NOTE: first element [ 1 ] is always the lang itself
-    return vim.treesitter.language.get_filetypes( lang )[ 2 ] or lang
+    -- other element placed in random order
+    -- XXX: unclear how to use this data, how to distinguish lang from filetype
+    -- return vim.treesitter.language.get_filetypes( lang )[ 2 ] or lang
+
+    return lang
   else
     return ""
   end
